@@ -88,11 +88,3 @@ local selectmod = modtab:CreateDropdown("Select mod", mods, function(val)
 	inputcontainer:Destroy()
 	input = nil
 end)
-
---credits
-local label = cred:CreateLabel("Interface : Xploit Library made by Code_Xploit")
-local label = cred:CreateLabel("Scripting : Xploit SDS Team")
-
-player.Character.Humanoid.Died:Connect(function()
-	window:Destroy() -- remove window if player died
-end)
