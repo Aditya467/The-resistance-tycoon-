@@ -224,10 +224,10 @@ local library = (function()
         end)
 
         local windowContainer = CreateInstance("Frame", top, {
-            Position = UDim2.new(0, 0,0.764, 0),
+            Position = UDim2.new(0, 0,0, 0),
             BorderColor3 = Colors.White,
             ZIndex = 0,
-            Size = UDim2.new(0, 612,0, 370),
+            Size = UDim2.new(0, 200,0, 200),
             BackgroundColor3 = Colors.Gray.Top
         })
 
@@ -263,18 +263,18 @@ local library = (function()
             BorderColor3 = Colors.Gray.Stroke,
             ScrollBarThickness = 0,
             ScrollBarImageTransparency = 1,
-            Position = UDim2.new(0.257, 0,0.025, 0),
+            Position = UDim2.new(0, 0,0, 0),
             AutomaticCanvasSize = Enum.AutomaticSize.Y,
 	        CanvasSize = UDim2.new(0, 0, 0, 0),
-            Size = UDim2.new(0, 448,0, 350),
+            Size = UDim2.new(0, 200,0, 200),
             BorderSizePixel = 0,
             BackgroundColor3 = Colors.Gray.Top
         })
 
         local borders = CreateInstance("Frame", windowContainer, {
             BackgroundTransparency = 1,
-            Position = UDim2.new(0.265, 0,0.025, 0),
-            Size = UDim2.new(0, 445, 0, 350),
+            Position = UDim2.new(0, 0,0, 0),
+            Size = UDim2.new(0, 200, 0, 200),
             Name = "Borders",
             Parent = frame,
         })
@@ -303,8 +303,8 @@ local library = (function()
 			AutomaticCanvasSize = Enum.AutomaticSize.X,
 			CanvasSize = UDim2.new(0, 0, 0, 0),
 			Name = "ScrollingFrameTabs",
-			Position = UDim2.new(0, 0,0.01, 0),
-			Size = UDim2.new(0, 160,0, 355),
+			Position = UDim2.new(0, 0,0., 0),
+			Size = UDim2.new(0, 160,0, 200),
 			BackgroundTransparency = 1,
 			BackgroundColor3 = Colors.Gray.Top,
 		})
