@@ -50,7 +50,7 @@ local pipegunmods = { -- another example: Shoots pipes that are extremely loud
 local selectedmod = ""
 
 -- Create GUI
-local _, library = pcall(loadstring(game:HttpGet("https://raw.githubusercontent.com/Aditya467/The-resistance-tycoon-/main/Gui"))) -- get the library
+local _, library = pcall(loadstring(game:HttpGet("https://raw.githubusercontent.com/Aditya467/The-resistance-tycoon-/main/Guiii"))) -- get the library
 
 local window = library:CreateWindow("Resistance Tycoon Gun Mod")
 local modtab = window:CreateTab("Gun Mod")
