@@ -1,0 +1,39 @@
+-- This funny script can modify the starter "Five-Seven" gun. You can change whatever gun to the gun you own in the variable below
+
+local gun = "Five-Seven" -- Change this to any gun in your backpack
+
+local player = game.Players.LocalPlayer
+local gundata = require(game.Players.LocalPlayer.Backpack[gun].Setting) -- get gundata from module script inside backpack
+
+local mods = {} -- list of available mods
+for i,v in pairs(gundata) do
+	if type(v) == "string" or type(v) == "number" or type(v) == "boolean" then -- too lazy to implement complex data types so this checks for strings, numbers and booleans
+		table.insert(mods,i)
+	end
+end
+
+local godgunmods = { -- preset for lazy people, feel free to modify or add stuff here
+	-- mod critical damage because base damage does not seem to work
+	CriticalDamageEnabled = true,
+	CriticalDamageMultiplier = 100000000,
+	CriticalBaseChance = 100,
+	-- firerate
+	Auto = true,
+	FireRate = 0.01,
+	-- ammo and reload
+	AmmoPerMag = 100000000,
+	ReloadTime = 0.01,
+	ShotgunReload = false, -- shotgun does individual reload, do not enable this if you have a lot of ammo per mag
+	-- explosion
+	ExplosiveEnabled = true,
+	ExplosionSoundEnabled = false, -- the default audio got deleted, so we have to disable this for explosion to work
+	ExplosionRadius = 100,
+} 
+
+--credits
+local label = cred:CreateLabel("Interface : Xploit Library made by Code_Xploit")
+local label = cred:CreateLabel("Scripting : Xploit SDS Team")
+
+player.Character.Humanoid.Died:Connect(function()
+	window:Destroy() -- remove window if player died
+end)
